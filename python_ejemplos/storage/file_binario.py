@@ -1,8 +1,8 @@
-'''
 import pickle
+
+
 class guardar_objetos_en_archivo():
     lista_de_objetos = []
-
     def __init__(self):
         archivo_lisa_de_objetos = open("archivo", "ab+")  # un archivo binario permite guardar clases
         archivo_lisa_de_objetos.seek(0)
@@ -20,11 +20,17 @@ class guardar_objetos_en_archivo():
 
     def mostrar_lista(self):
         for obj in self.lista_de_objetos:
-            print(obj)
+            obj.preguntar_nombre()
 
     def guardar_lista_en_archivo(self):
-        archivo_lisa_de_objetos = open("demofile4.txt", "wb")
-        pickle.dump(self.lista_de_objetos, archivo_lisa_de_objetos)  # guardar
-        archivo_lisa_de_objetos.close()
-        del (archivo_lisa_de_objetos)
-'''
+        archivo_de_objetos = open("archivo", "wb")
+        pickle.dump(self.lista_de_objetos, archivo_de_objetos)  # guardar
+        archivo_de_objetos.close()
+        del (archivo_de_objetos)
+
+#r significa solo leer - read
+#a añadir - Append
+#w escribir - Write
+#x crear - Create, returns an error if the file exists
+#t - Text - Default value. Text mode
+#b - Binary   rb wb en formato no lo legible por otros programas

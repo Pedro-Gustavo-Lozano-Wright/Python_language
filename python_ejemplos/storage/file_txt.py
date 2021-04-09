@@ -1,6 +1,7 @@
 
 file_name = "texto_simple.txt"
 lista_de_texto = []
+
 def crear_texto_simple():
   # "D:\\storage\texto_simple.txt"
   #crear  "x" - Create   "a" - Append   "w" escribir
@@ -35,3 +36,11 @@ def borrar_texto_simple():
   file = open(file_name, "w")
   file.write("")
   file.close()
+
+  # r significa solo leer - read
+  # a añadir - Append
+  # w escribir - Write
+  # x crear - Create, returns an error if the file exists
+  # t - Text - Default value. Text mode
+  # b - Binary   rb wb en formato no lo legible por otros programas
+

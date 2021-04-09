@@ -1,17 +1,27 @@
-from clases.clase_descriptor import Persona_Descriptor
-from clases.clase_herencia_multiple_y_polimorfismo import \
-    Classe_B, Classe_C, Classe_A, \
+from python_ejemplos.clases.clase_descriptor import Persona_Descriptor
+from python_ejemplos.clases.clase_herencia_multiple_y_polimorfismo import Classe_B, Classe_C, Classe_A, \
     llamar_a_metodo_polimorfismo
-from clases.clases_simple import Person_abstracta, Person_estudiante
-from storage.file_txt import crear_texto_simple, leer_texto_simple, add_texto_simple, borrar_texto_simple, \
-    add_line_texto_simple
+from python_ejemplos.clases.clases_simple import Person_abstracta, Person_estudiante
+from python_ejemplos.conjuntos.basicos import string_como_lista, lista_basico, tupla_aburrido, diccionario_basico, \
+    set_basico, diccionarios_json
+from python_ejemplos.conjuntos.especiales import funcion_lambda, funcion_map, funcion_listas_y_lambda, funcion_yield
+from python_ejemplos.funciones.decoradores import funcion_ejemplo_dec, funcion_decorador_argumentos
+from python_ejemplos.funciones.decoradores_con_classes import decorador_envuelve_a_clase, classe_como_decorador
+from python_ejemplos.funciones.funciones_basicas import funcion_en_una_variable
+from python_ejemplos.matematicas.algebra_variables import operaciones_boleanas
+from python_ejemplos.sistema.errores import errores
+from python_ejemplos.storage.file_binario import guardar_objetos_en_archivo
+from python_ejemplos.storage.file_txt import crear_texto_simple, leer_texto_simple, add_line_texto_simple, \
+    add_texto_simple, borrar_texto_simple
 
 
 def clases_simple():
+
     print(" \n\n-clases_simple\n ")
     gustavo = Person_abstracta("Gus", "Loz", 24)
     print(gustavo.__doc__[0:])
     print("")
+
     gustavo.name = "Tavo"
     gustavo.preguntar_nombre()
     gustavo.anadir_edad(1)
@@ -44,25 +54,13 @@ def clase_herencia_multiple_y_polimorfismo():
 
 def lambda_map_y_list():
     print(" \n\n-lambda_map_y_list\n ")
-    personas = [Person_abstracta("Juan", "", 35),
-                Person_abstracta("Marta", "", 16),
-                Person_abstracta("Manuel", "", 78),
-                Person_abstracta("Eduardo", "", 12)]
-
-    menores = filter(lambda persona: persona.age < 18, personas)  # filtrar por atributo de la clase
-    for menor in menores:
-        print(menor.name)
+    funcion_lambda()
     print("")
-    personas_map = map(lambda persona: Person_abstracta(persona.name, persona.age + 1), personas)
-    for persona_old in personas_map:
-        print(persona_old.name, persona_old.age)
+    funcion_map()
     print("")
-    numeros = [2, 5, 10, 23, 50, 33]
-    print(list(map(lambda x: x * 2, numeros)))
+    funcion_listas_y_lambda()
     print("")
-    a = [1, 2, 3, 4, 5]
-    b = [6, 7, 8, 9, 10]
-    print(list(map(lambda x, y: x * y, a, b)))  # [7, 9, 11, 13, 15]
+    funcion_yield()
 
 def elementos_de_clase_con_inspect():
     print(" \n\n-elementos_de_clase_con_inspect\n ")
@@ -89,13 +87,6 @@ def descriptores_geter_y_seter_mod():
     del persona_simple.value
     del persona_simple.value2
 
-def guardar_file():
-    crear_texto_simple()
-    leer_texto_simple()
-    add_line_texto_simple("otra linea")
-    add_texto_simple("text_add")
-    borrar_texto_simple()
-
 def variables():
     variable_global_x = 300
     def myfunc():
@@ -112,3 +103,47 @@ def variables():
         print(variable_z)
     myfunc()
     print(variable_z)
+
+    car = {"brand": "Ford", "year": 1964}
+    dic_x = car.items()
+    print(dic_x)        # before the change
+    car["year"] = 2020  # la variable y el diccionario estan conectados, se actualiza igualmente
+    print(dic_x)        # after the change
+    print("las variables estan conectadas")          # after the change
+
+def guardar_file():
+    crear_texto_simple()
+    leer_texto_simple()
+    add_line_texto_simple("otra linea")
+    add_texto_simple("text_add")
+    borrar_texto_simple()
+    #import os #borrar carpeta
+    #os.rmdir("myfolder")
+
+def guardar_file_bin():
+    objeto_bin = guardar_objetos_en_archivo()
+    gustavo = Person_abstracta("aa", "bb", 24)
+    objeto_bin.agregar_objetos(gustavo)
+    objeto_bin.mostrar_lista()
+
+def ejemplos_conjuntos():
+    string_como_lista()
+    lista_basico()
+    tupla_aburrido()
+    diccionario_basico()
+    set_basico()
+    diccionarios_json()
+
+def matematica_boleana():
+    operaciones_boleanas()
+
+def funciones_especiales():
+    funcion_en_una_variable()
+    funcion_ejemplo_dec()
+    funcion_decorador_argumentos()
+    decorador_envuelve_a_clase()
+    classe_como_decorador()
+
+def sistema_tools():
+    errores()
+''''''
