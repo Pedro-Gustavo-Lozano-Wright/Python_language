@@ -3,6 +3,8 @@ from clases.clase_herencia_multiple_y_polimorfismo import \
     Classe_B, Classe_C, Classe_A, \
     llamar_a_metodo_polimorfismo
 from clases.clases_simple import Person_abstracta, Person_estudiante
+from storage.file_txt import crear_texto_simple, leer_texto_simple, add_texto_simple, borrar_texto_simple, \
+    add_line_texto_simple
 
 
 def clases_simple():
@@ -20,7 +22,6 @@ def clases_simple():
     gustavo_alumno.actualizar_escuela("uni")
     gustavo_alumno.preguntar_escuela()
     gustavo_alumno.preguntar_nombre()
-
 
 def clase_herencia_multiple_y_polimorfismo():
     print(" \n\n-clase_herencia_multiple_y_polimorfismo\n ")
@@ -40,7 +41,6 @@ def clase_herencia_multiple_y_polimorfismo():
     llamar_a_metodo_polimorfismo(objeto_de_clase_b)
     llamar_a_metodo_polimorfismo(objeto_de_clase_c)
     # aqui es ejecuta escojiendo el metodo
-
 
 def lambda_map_y_list():
     print(" \n\n-lambda_map_y_list\n ")
@@ -64,7 +64,6 @@ def lambda_map_y_list():
     b = [6, 7, 8, 9, 10]
     print(list(map(lambda x, y: x * y, a, b)))  # [7, 9, 11, 13, 15]
 
-
 def elementos_de_clase_con_inspect():
     print(" \n\n-elementos_de_clase_con_inspect\n ")
 
@@ -76,7 +75,6 @@ def elementos_de_clase_con_inspect():
         if name.startswith('__'):
             continue
         print('{} : {!r}'.format(name, data))
-
 
 def descriptores_geter_y_seter_mod():
     print(" \n\n-descriptores_geter_y_seter_mod\n ")
@@ -90,3 +88,27 @@ def descriptores_geter_y_seter_mod():
     print("")
     del persona_simple.value
     del persona_simple.value2
+
+def guardar_file():
+    crear_texto_simple()
+    leer_texto_simple()
+    add_line_texto_simple("otra linea")
+    add_texto_simple("text_add")
+    borrar_texto_simple()
+
+def variables():
+    variable_global_x = 300
+    def myfunc():
+        global variable_global_x #forzar variable global
+        variable_global_x = 200
+    myfunc()
+    print(variable_global_x)
+
+    variable_z = 300
+    def myfunc():
+        variable_z = 200 #solo es global
+        # cuando no parece que es una nueva
+        # variable con el mismo nombre
+        print(variable_z)
+    myfunc()
+    print(variable_z)
