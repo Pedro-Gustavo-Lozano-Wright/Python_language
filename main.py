@@ -1,8 +1,5 @@
-from design_patterns import design_patterns
-from python_ejemplos import python_ejemplos
-
 if __name__ == '__main__':
-    design_patterns.ejemplo_factoria_abstracta()
+    '''design_patterns.ejemplo_factoria_abstracta()
 
     python_ejemplos.clases_simple()
     python_ejemplos.clase_herencia_multiple_y_polimorfismo()
@@ -15,9 +12,9 @@ if __name__ == '__main__':
     python_ejemplos.ejemplos_conjuntos()
     python_ejemplos.matematica_boleana()
     python_ejemplos.funciones_especiales()
-    '''python_ejemplos.sistema_tools()
+    python_ejemplos.sistema_tools()
+    python_ejemplos.fuciones_string()
     '''
-
-
 #from folder_name import file_name
-#folder_name.funcion_name()
+#from folder_name import *
+# #folder_name.funcion_name()

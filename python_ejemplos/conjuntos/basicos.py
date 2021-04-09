@@ -9,7 +9,6 @@ def string_como_lista():# los strings son listas
     print(word[2:])
     print(word[-2:])  # cadena desde el penu ltimo
 
-
 def lista_basico():# las listas son editables
     list = ['abcd', 786, 2.23, 'john', 70.2, 'abcd']# CORCHETES
     list_num = [123, 23, 252]

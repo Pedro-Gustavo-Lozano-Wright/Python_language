@@ -4,11 +4,15 @@ from python_ejemplos.clases.clase_herencia_multiple_y_polimorfismo import Classe
 from python_ejemplos.clases.clases_simple import Person_abstracta, Person_estudiante
 from python_ejemplos.conjuntos.basicos import string_como_lista, lista_basico, tupla_aburrido, diccionario_basico, \
     set_basico, diccionarios_json
-from python_ejemplos.conjuntos.especiales import funcion_lambda, funcion_map, funcion_listas_y_lambda, funcion_yield
+from python_ejemplos.conjuntos.especiales import funcion_lambda, funcion_map, funcion_listas_y_lambda, funcion_yield, \
+    funcion_on_demand
+from python_ejemplos.conjuntos.string import funcion_regular_expression, funcion_maneras_imprimir, ahorro_de_listas, \
+    siclos_con_listas
 from python_ejemplos.funciones.decoradores import funcion_ejemplo_dec, funcion_decorador_argumentos
 from python_ejemplos.funciones.decoradores_con_classes import decorador_envuelve_a_clase, classe_como_decorador
-from python_ejemplos.funciones.funciones_basicas import funcion_en_una_variable
+from python_ejemplos.funciones.funciones_basicas import funcion_en_una_variable, funcion_multiple_retutn
 from python_ejemplos.matematicas.algebra_variables import operaciones_boleanas
+from python_ejemplos.matematicas.logica import contador_wile
 from python_ejemplos.sistema.errores import errores
 from python_ejemplos.storage.file_binario import guardar_objetos_en_archivo
 from python_ejemplos.storage.file_txt import crear_texto_simple, leer_texto_simple, add_line_texto_simple, \
@@ -61,6 +65,8 @@ def lambda_map_y_list():
     funcion_listas_y_lambda()
     print("")
     funcion_yield()
+    print("")
+    funcion_on_demand()
 
 def elementos_de_clase_con_inspect():
     print(" \n\n-elementos_de_clase_con_inspect\n ")
@@ -136,14 +142,24 @@ def ejemplos_conjuntos():
 
 def matematica_boleana():
     operaciones_boleanas()
+    contador_wile()
 
 def funciones_especiales():
     funcion_en_una_variable()
+    funcion_multiple_retutn()
     funcion_ejemplo_dec()
     funcion_decorador_argumentos()
     decorador_envuelve_a_clase()
     classe_como_decorador()
 
+def fuciones_string():
+    funcion_regular_expression()
+    funcion_maneras_imprimir()
+    ahorro_de_listas()
+    siclos_con_listas()
+
 def sistema_tools():
     errores()
+
+
 ''''''

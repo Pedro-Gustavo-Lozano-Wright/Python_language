@@ -1,5 +1,5 @@
 #lambda_map_list_yield
-from python_ejemplos.python_ejemplos import Person_abstracta
+from python_ejemplos.matematicas.python_ejemplos import Person_abstracta
 
 personas = [Person_abstracta("Juan", "", 35),
             Person_abstracta("Marta", "", 16),
@@ -32,3 +32,25 @@ def funcion_yield():
     mycont = contador(7)# va devilviendo una lista
     print(list(mycont))
 
+def funcion_on_demand():
+    class on_demand:
+        def __iter__(self):
+            self.a = 1
+            print("iter")
+            return self
+
+        def __next__(self):
+            x = self.a
+            self.a += 1
+            print("next")
+            return x
+
+    myclass = on_demand()
+    myiter = iter(myclass)  # cada vez que se nececita
+    # vuelve a la funcion para generar otro dato,
+    # bastante util cuando no sabes cuantos datos nececitaras
+    print(next(myiter))
+    print(next(myiter))
+    print(next(myiter))
+    print(next(myiter))
+    print(next(myiter))
