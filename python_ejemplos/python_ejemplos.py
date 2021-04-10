@@ -1,4 +1,5 @@
-from python_ejemplos.clases.clase_descriptor import Persona_Descriptor
+
+from python_ejemplos.clases.clase_descriptor import funcion_descriptor
 from python_ejemplos.clases.clase_herencia_multiple_y_polimorfismo import Classe_B, Classe_C, Classe_A, \
     llamar_a_metodo_polimorfismo
 from python_ejemplos.clases.clases_simple import Person_abstracta, Person_estudiante
@@ -11,9 +12,12 @@ from python_ejemplos.conjuntos.string import funcion_regular_expression, funcion
 from python_ejemplos.funciones.decoradores import funcion_ejemplo_dec, funcion_decorador_argumentos
 from python_ejemplos.funciones.decoradores_con_classes import decorador_envuelve_a_clase, classe_como_decorador
 from python_ejemplos.funciones.funciones_basicas import funcion_en_una_variable, funcion_multiple_retutn
-from python_ejemplos.matematicas.algebra_variables import operaciones_boleanas
-from python_ejemplos.matematicas.logica import contador_wile
+from python_ejemplos.matematicas.algebra_variables import operaciones_boleanas, operaciones_binarias
+from python_ejemplos.matematicas.logica import contador_wile, funcion_if_else, operaciones
 from python_ejemplos.sistema.errores import errores
+from python_ejemplos.sistema.tiempo import funcion_dormir_simple, funcion_hilos, auto_destruccion_de_hilo, \
+    funcion_hilos_juntos, funcion_time_out
+from python_ejemplos.sistema.tkin_graph import funcion_grafica
 from python_ejemplos.storage.file_binario import guardar_objetos_en_archivo
 from python_ejemplos.storage.file_txt import crear_texto_simple, leer_texto_simple, add_line_texto_simple, \
     add_texto_simple, borrar_texto_simple
@@ -37,6 +41,13 @@ def clases_simple():
     gustavo_alumno.preguntar_escuela()
     gustavo_alumno.preguntar_nombre()
 
+    import inspect
+
+    for name, data in inspect.getmembers(gustavo):
+        if name.startswith('__'):
+            continue
+        print('{} : {!r}'.format(name, data))
+
 def clase_herencia_multiple_y_polimorfismo():
     print(" \n\n-clase_herencia_multiple_y_polimorfismo\n ")
     objeto_de_clase_b = Classe_B("Betabel")  #
@@ -56,42 +67,15 @@ def clase_herencia_multiple_y_polimorfismo():
     llamar_a_metodo_polimorfismo(objeto_de_clase_c)
     # aqui es ejecuta escojiendo el metodo
 
-def lambda_map_y_list():
-    print(" \n\n-lambda_map_y_list\n ")
-    funcion_lambda()
-    print("")
-    funcion_map()
-    print("")
-    funcion_listas_y_lambda()
-    print("")
-    funcion_yield()
-    print("")
-    funcion_on_demand()
-
-def elementos_de_clase_con_inspect():
-    print(" \n\n-elementos_de_clase_con_inspect\n ")
-
-    gustavo = Person_abstracta("Gus", "Loz", 24)
-
-    import inspect
-
-    for name, data in inspect.getmembers(gustavo):
-        if name.startswith('__'):
-            continue
-        print('{} : {!r}'.format(name, data))
-
 def descriptores_geter_y_seter_mod():
-    print(" \n\n-descriptores_geter_y_seter_mod\n ")
-    persona_simple = Persona_Descriptor('Peter', "Gustaf")
-    print("")
-    algo = persona_simple.value
-    algo2 = persona_simple.value2
-    print("")
-    persona_simple.value = 'Pit'
-    persona_simple.value2 = 'Gus'
-    print("")
-    del persona_simple.value
-    del persona_simple.value2
+    funcion_descriptor()
+
+def lambda_map_y_list():
+    funcion_lambda()
+    funcion_map()
+    funcion_listas_y_lambda()
+    funcion_yield()
+    funcion_on_demand()
 
 def variables():
     variable_global_x = 300
@@ -117,6 +101,9 @@ def variables():
     print(dic_x)        # after the change
     print("las variables estan conectadas")          # after the change
 
+    a,b,c = 1,2,"john" #3 variables diferentes
+    z = 1 ; del z # eliminar variable
+
 def guardar_file():
     crear_texto_simple()
     leer_texto_simple()
@@ -140,9 +127,12 @@ def ejemplos_conjuntos():
     set_basico()
     diccionarios_json()
 
-def matematica_boleana():
+def matematicas():
     operaciones_boleanas()
     contador_wile()
+    funcion_if_else()
+    operaciones()
+    operaciones_binarias()
 
 def funciones_especiales():
     funcion_en_una_variable()
@@ -160,6 +150,13 @@ def fuciones_string():
 
 def sistema_tools():
     errores()
+    funcion_grafica()
+    funcion_dormir_simple()
+    funcion_hilos()
+    funcion_hilos_juntos()
+    auto_destruccion_de_hilo()
+    funcion_time_out()
 
+def base_de_datos():
+    pass
 
-''''''

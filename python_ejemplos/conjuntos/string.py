@@ -20,6 +20,11 @@ def funcion_maneras_imprimir():
     orden_inverso = "ultimo {2} segundo {1} primerp {0}"
     print(ordern.format(var_1, var_2, var_3))
     print(orden_inverso.format(var_1, var_2, var_3))
+    print(f"imprimir una variable {var_1}",)
+    print(("gus" + "\n") * 3)  # repetir print
+    print("a'b" + "\"a\"b" + '"a"b' + 'a\'b')  # imprimir comillas
+    print('First line.\nSecond line.')
+    word = 'Python'; print(word); print("gus")  # 3 lin3as 3n una
 
 
 def ahorro_de_listas():
@@ -39,14 +44,17 @@ def ahorro_de_listas():
              if numero % 2 == 0]
     print(lista)
 
+    print(list(filter(lambda numero: numero % 5 == 0, [2, 5, 10, 23, 50, 33])))  # filtrar  lista
+
 
 def siclos_con_listas():
     fruits_list = ['banana', 'apple', 'mango']
     for fruit_elemento in fruits_list:  # Second Example
         print('Current fruit :', fruit_elemento)
+    # break # continue
 
     fruits = ['banana', 'apple', 'mango']
     for index in range(len(fruits)):
         print('Current fruit :', fruits[index])
-
+    # break # continue
 

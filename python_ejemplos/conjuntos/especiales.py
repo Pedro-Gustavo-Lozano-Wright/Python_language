@@ -1,5 +1,5 @@
 #lambda_map_list_yield
-from python_ejemplos.matematicas.python_ejemplos import Person_abstracta
+from python_ejemplos.python_ejemplos import Person_abstracta
 
 personas = [Person_abstracta("Juan", "", 35),
             Person_abstracta("Marta", "", 16),
