@@ -38,3 +38,28 @@ def funcion_decorador_argumentos():
 
     print(seleccion('suma', 5.0, 3))
     print(seleccion('multiplicacion', 5.0, 3))
+
+
+def decoradores_anidados():
+    def star(func):
+        def inner(*args, **kwargs):
+            print("*" * 30)
+            func(*args, **kwargs)
+            print("*" * 30)
+
+        return inner
+
+    def percent(func):
+        def inner(*args, **kwargs):
+            print("%" * 30)
+            func(*args, **kwargs)
+            print("%" * 30)
+
+        return inner
+
+    @star
+    @percent
+    def printer(msg):
+        print(msg)
+
+    printer("Hello")

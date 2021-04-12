@@ -1,4 +1,8 @@
 
+#clase de eje de cordenadas
+#operaciones_ecpeciales()
+
+
 def operaciones_boleanas():
     # conjuntos para operaciones logicas and or etc
     a = {1, 2, 5, 4.6, 7.8, 'r', 's'}

@@ -1,4 +1,25 @@
 
+def hilos_threading():
+    import time
+    import threading
+
+    def print_hello_three_times():
+        for i in range(3):
+            print("hilo simple")
+            time.sleep(1)
+        print("fin")
+
+    def print_hi_three_times():
+        for i in range(3):
+            print("Python es hermoso")
+            time.sleep(1)
+        print("fin")
+
+    t1 = threading.Thread(target=print_hello_three_times)
+    t2 = threading.Thread(target=print_hi_three_times)
+
+    t1.start()
+    t2.start()
 
 def funcion_dormir_simple():
     import asyncio
@@ -80,6 +101,25 @@ def funcion_time_out():
     extraer_dato = int(input("Introduce un numero: "))
     print(extraer_dato)
 
+
+def funcion_hora():
+    import time
+
+    result = time.localtime()
+    print("result:", result)
+    print("year:", result.tm_year)
+    print("tm_hour:", result.tm_hour)
+
+    t = (2018, 12, 28, 8, 44, 4, 4, 362, 0)
+    local_time = time.mktime(t)
+    print("Local time:", local_time)
+
+    # while True:
+    for a in range(0, 10):
+        localtime = time.localtime()
+        result = time.strftime("%I:%M:%S %p", localtime)
+        print(result)
+        time.sleep(1)
 
 # la estructura para llamar siempre es...  asyncio.algo(nombre_de_funcion())
 # la estructura de la funcion siempre es...  async def nombre_de_funcion():

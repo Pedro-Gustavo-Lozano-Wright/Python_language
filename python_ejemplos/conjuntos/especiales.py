@@ -1,5 +1,5 @@
 #lambda_map_list_yield
-from python_ejemplos.python_ejemplos import Person_abstracta
+from python_ejemplos.clases.clases_simple import Person_abstracta
 
 personas = [Person_abstracta("Juan", "", 35),
             Person_abstracta("Marta", "", 16),
@@ -23,7 +23,7 @@ def funcion_listas_y_lambda():
     b = [6, 7, 8, 9, 10]
     print(list(map(lambda x, y: x * y, a, b)))  # [7, 9, 11, 13, 15]
 
-def funcion_yield():
+def funcion_yield():  #https://www.programiz.com/python-programming/generator
     def contador(max):
         n = 0
         while n < max:
@@ -32,7 +32,7 @@ def funcion_yield():
     mycont = contador(7)# va devilviendo una lista
     print(list(mycont))
 
-def funcion_on_demand():
+def funcion_on_demand(): #https://www.programiz.com/python-programming/generator
     class on_demand:
         def __iter__(self):
             self.a = 1

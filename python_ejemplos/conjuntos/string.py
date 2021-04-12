@@ -8,6 +8,8 @@ def funcion_regular_expression():
     z = re.split("\s", txt)
     print(z)
 
+    #https://www.programiz.com/python-programming/regex
+
 
 def funcion_maneras_imprimir():
     a = 3
@@ -25,6 +27,7 @@ def funcion_maneras_imprimir():
     print("a'b" + "\"a\"b" + '"a"b' + 'a\'b')  # imprimir comillas
     print('First line.\nSecond line.')
     word = 'Python'; print(word); print("gus")  # 3 lin3as 3n una
+    print("variable {}".format(3))# se pueden poner objetos para concatenarlos
 
 
 def ahorro_de_listas():
@@ -57,4 +60,42 @@ def siclos_con_listas():
     for index in range(len(fruits)):
         print('Current fruit :', fruits[index])
     # break # continue
+
+
+
+
+#inicia con cierto texto
+cadena = "bienvenido a mi aplicación".capitalize()
+print (cadena.startswith("Bienvenido"))
+print (cadena.startswith("aplicación", 16))
+
+#termina con cierto texto
+cadena = "bienvenido a mi aplicación".capitalize()
+print (cadena.endswith("aplicación"))
+print (cadena.endswith("Bienvenido", 0, 10))
+
+#tiene texto y numeros
+cadena = "pepegrillo 75"
+print (cadena.isalnum())
+
+#es numero
+cadena = "75"
+print (cadena.isdigit())
+
+#es minuscula
+cadena = "pepe grillo"
+print (cadena.islower())
+
+#es mayuscula
+cadena = "PEPE GRILLO"
+print (cadena.isupper())
+
+
+
+
+
+'''
+\n	Nueva línea 
+\t	Tabulador
+'''
 
