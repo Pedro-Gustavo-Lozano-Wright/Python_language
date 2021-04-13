@@ -5,8 +5,8 @@ from python_ejemplos import python_ejemplos
 
 if __name__ == '__main__':
     factoria_abstracta.ejemplo_factoria_abstracta()
-    singleton.Singleton1()
-    singleton.Singleton2()
+    singleton.singleton1()
+    singleton.singleton2()
     builder.ejemplo_builder()
     factori_metod.factori_metod()
     composite.ejemplo_composite()

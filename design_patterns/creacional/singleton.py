@@ -1,5 +1,5 @@
 
-def Singleton1():
+def singleton1():
 
     class Singleton(type):
 
@@ -38,7 +38,7 @@ def Singleton1():
 
 
 
-def Singleton2():
+def singleton2():
 
     class SingletonMeta(type):
 

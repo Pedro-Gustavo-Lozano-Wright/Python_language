@@ -1,5 +1,5 @@
 class Person_abstracta():
-
+  """texto de descripcion"""
   def __init__(self, name="", last="", age=0):
     self.__vivo = True  # variabl privada
     self._last = last  # variabl protejida
