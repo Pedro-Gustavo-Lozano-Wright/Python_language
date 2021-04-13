@@ -12,7 +12,7 @@ if __name__ == '__main__':
     composite.ejemplo_composite()
     decorador_anadir_capas.decorador_anadir_capas()
     cadena_de_operacion.cadena_de_operacion()
-    '''
+
     python_ejemplos.classe_en_python()
     python_ejemplos.lambda_map_y_list()
     python_ejemplos.guardar_file()
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     python_ejemplos.fuciones_string()
     python_ejemplos.base_de_datos()
     '''
-
+    '''
 #from folder_name import file_name
 #from folder_name import *
 # #folder_name.funcion_name()
