@@ -1,3 +1,5 @@
+from datetime import date
+
 
 def hilos_threading():
     import time
@@ -104,6 +106,9 @@ def funcion_time_out():
 
 def funcion_hora():
     import time
+
+    dia = date(2020, 5, 26)
+    print(dia)#formato de dia simple
 
     result = time.localtime()
     print("result:", result)

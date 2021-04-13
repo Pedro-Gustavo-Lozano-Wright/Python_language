@@ -1,10 +1,18 @@
-from design_patterns import design_patterns
+from design_patterns.creacional import factoria_abstracta, singleton, builder, factori_metod
+from design_patterns.estructural import composite, decorador_anadir_capas
+from design_patterns.comportamiento import cadena_de_operacion
 from python_ejemplos import python_ejemplos
 
 if __name__ == '__main__':
-
-    design_patterns.ejemplo_factoria_abstracta()
-
+    factoria_abstracta.ejemplo_factoria_abstracta()
+    singleton.Singleton1()
+    singleton.Singleton2()
+    builder.ejemplo_builder()
+    factori_metod.factori_metod()
+    composite.ejemplo_composite()
+    decorador_anadir_capas.decorador_anadir_capas()
+    cadena_de_operacion.cadena_de_operacion()
+    '''
     python_ejemplos.classe_en_python()
     python_ejemplos.lambda_map_y_list()
     python_ejemplos.guardar_file()
@@ -16,8 +24,6 @@ if __name__ == '__main__':
     #python_ejemplos.sistema_tools()
     python_ejemplos.fuciones_string()
     python_ejemplos.base_de_datos()
-
-    '''
     '''
 
 #from folder_name import file_name

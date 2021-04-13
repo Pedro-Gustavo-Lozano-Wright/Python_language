@@ -9,7 +9,7 @@ from python_ejemplos.conjuntos.basicos import string_como_lista, lista_basico, t
 from python_ejemplos.conjuntos.especiales import funcion_lambda, funcion_map, funcion_listas_y_lambda, funcion_yield, \
     funcion_on_demand
 from python_ejemplos.conjuntos.string import funcion_regular_expression, funcion_maneras_imprimir, ahorro_de_listas, \
-    siclos_con_listas
+    siclos_con_listas, revicion_string
 from python_ejemplos.funciones.decoradores import funcion_ejemplo_dec, funcion_decorador_argumentos, \
     decoradores_anidados
 from python_ejemplos.funciones.decoradores_con_classes import decorador_envuelve_a_clase, classe_como_decorador
@@ -112,6 +112,7 @@ def fuciones_string():
     funcion_maneras_imprimir()
     ahorro_de_listas()
     siclos_con_listas()
+    revicion_string()
 
 def sistema_tools():
     errores()

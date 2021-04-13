@@ -1,5 +1,4 @@
 class Person_abstracta():
-  """esta es el texto de descripcion"""
 
   def __init__(self, name="", last="", age=0):
     self.__vivo = True  # variabl privada
@@ -35,7 +34,6 @@ class Person_estudiante(Person_abstracta):
 
   def preguntar_escuela(self):
     print(self.escuela)
-
 
 def ejemplo_clase_abstracta():
 

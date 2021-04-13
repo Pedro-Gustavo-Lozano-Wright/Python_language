@@ -62,33 +62,35 @@ def siclos_con_listas():
     # break # continue
 
 
+def revicion_string():
+    print("u" in "gustavo")
 
+    # inicia con cierto texto
+    cadena = "bienvenido a mi aplicación".capitalize()
+    print(cadena.startswith("Bienvenido"))
+    print(cadena.startswith("aplicación", 16))
 
-#inicia con cierto texto
-cadena = "bienvenido a mi aplicación".capitalize()
-print (cadena.startswith("Bienvenido"))
-print (cadena.startswith("aplicación", 16))
+    # termina con cierto texto
+    cadena = "bienvenido a mi aplicación".capitalize()
+    print(cadena.endswith("aplicación"))
+    print(cadena.endswith("Bienvenido", 0, 10))
 
-#termina con cierto texto
-cadena = "bienvenido a mi aplicación".capitalize()
-print (cadena.endswith("aplicación"))
-print (cadena.endswith("Bienvenido", 0, 10))
+    # tiene texto y numeros
+    cadena = "pepegrillo 75"
+    print(cadena.isalnum())
 
-#tiene texto y numeros
-cadena = "pepegrillo 75"
-print (cadena.isalnum())
+    # es numero
+    cadena = "75"
+    print(cadena.isdigit())
 
-#es numero
-cadena = "75"
-print (cadena.isdigit())
+    # es minuscula
+    cadena = "pepe grillo"
+    print(cadena.islower())
 
-#es minuscula
-cadena = "pepe grillo"
-print (cadena.islower())
+    # es mayuscula
+    cadena = "PEPE GRILLO"
+    print(cadena.isupper())
 
-#es mayuscula
-cadena = "PEPE GRILLO"
-print (cadena.isupper())
 
 
 
