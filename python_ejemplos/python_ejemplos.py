@@ -81,6 +81,7 @@ def guardar_file_bin():
     objeto_bin.agregar_objetos(gustavo)
     objeto_bin.mostrar_lista()
 
+
 def ejemplos_conjuntos():
     string_como_lista()
     lista_basico()

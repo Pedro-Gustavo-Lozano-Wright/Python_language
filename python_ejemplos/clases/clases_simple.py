@@ -42,6 +42,9 @@ def ejemplo_clase_abstracta():
   print(gustavo.__doc__[0:])  # texto de documentacion
   print("")
 
+  gustavo.otravariable = "otra variable"
+  print(gustavo.otravariable)
+
   gustavo.name = "Tavo"
   gustavo.preguntar_nombre()
   gustavo.anadir_edad(1)

@@ -31,6 +31,14 @@ def funcion_yield():  #https://www.programiz.com/python-programming/generator
             n = n + 1  # yield from es esnviar un sub elemento
     mycont = contador(7)# va devilviendo una lista
     print(list(mycont))
+    mycont2 = contador(4)# va devilviendo una lista
+    print(mycont)
+    print("-")
+    print(mycont)
+    print("-")
+    print(mycont)
+    print("-")
+    print(mycont)
 
 def funcion_on_demand(): #https://www.programiz.com/python-programming/generator
     class on_demand:
