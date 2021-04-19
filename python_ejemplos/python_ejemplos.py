@@ -18,6 +18,7 @@ from python_ejemplos.matematicas.algebra_variables import operaciones_boleanas, 
 from python_ejemplos.matematicas.logica import contador_wile, funcion_if_else, operaciones
 from python_ejemplos.matematicas.matmaticas import matematicas_general
 from python_ejemplos.sistema.errores import errores
+from python_ejemplos.sistema.pyautogui import ejemplo_pyautogui
 from python_ejemplos.sistema.tiempo import funcion_dormir_simple, funcion_hilos, auto_destruccion_de_hilo, \
     funcion_hilos_juntos, funcion_time_out, funcion_hora, hilos_threading
 from python_ejemplos.sistema.tkin_graph import funcion_grafica
@@ -125,6 +126,7 @@ def sistema_tools():
     auto_destruccion_de_hilo()
     funcion_time_out()
     funcion_hora()
+    ejemplo_pyautogui()
 
 def base_de_datos():
     pass
