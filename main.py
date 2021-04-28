@@ -5,7 +5,6 @@ from python_ejemplos import python_ejemplos
 
 if __name__ == '__main__':
 
-
     factoria_abstracta.ejemplo_factoria_abstracta()
     #objetos con propiedades y constructores abstractas
     singleton.singleton1()

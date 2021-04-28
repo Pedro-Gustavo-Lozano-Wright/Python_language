@@ -7,7 +7,7 @@ from python_ejemplos.clases.polimorfismo_simple import polimorfismo_simple
 from python_ejemplos.conjuntos.basicos import string_como_lista, lista_basico, tupla_aburrido, diccionario_basico, \
     set_basico, diccionarios_json
 from python_ejemplos.conjuntos.especiales import funcion_lambda, funcion_map, funcion_listas_y_lambda, funcion_yield, \
-    funcion_on_demand
+    funcion_on_demand, mescla_faro_de_listas_zip
 from python_ejemplos.conjuntos.string import funcion_regular_expression, funcion_maneras_imprimir, ahorro_de_listas, \
     siclos_con_listas, revicion_string
 from python_ejemplos.funciones.decoradores import funcion_ejemplo_dec, funcion_decorador_argumentos, \
@@ -37,8 +37,9 @@ def lambda_map_y_list():
     funcion_lambda()
     funcion_map()
     funcion_listas_y_lambda()
-    funcion_on_demand()
     funcion_yield()
+    mescla_faro_de_listas_zip()
+    funcion_on_demand()
 
 def variables():
     variable_global_x = 300
